@@ -187,7 +187,7 @@ class UIManager():
                         indx += 1
                         break
                     else:
-                        LOG.debug((child.tag, child.attrib, parents.tag,
+                        LOG.debug(('del', child.tag, child.attrib, parents.tag,
                                 parents.attrib))
                         del parents[indx]
                         break
