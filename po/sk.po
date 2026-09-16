@@ -17,7 +17,7 @@ msgstr ""
 "Project-Id-Version: 4.0-beta\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-13 00:06+0100\n"
-"PO-Revision-Date: 2026-08-26 05:51+0000\n"
+"PO-Revision-Date: 2026-09-16 14:51+0000\n"
 "Last-Translator: Milan <mobrcian@hotmail.com>\n"
 "Language-Team: Slovak <https://hosted.weblate.org/projects/gramps-project/"
 "gramps/sk/>\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=((n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2);\n"
-"X-Generator: Weblate 2026.9.dev0\n"
+"X-Generator: Weblate 2026.10.dev0\n"
 
 #: ../data/holidays.xml:3
 msgid "Bulgaria"
@@ -8815,11 +8815,11 @@ msgstr "Potvrdená časová pečiatka"
 
 #: ../gramps/gen/lib/fs/familysearchsync.py:88
 msgid "Gramps modified timestamp"
-msgstr "Gramps zmenil časovú pečiatku"
+msgstr "Upravená časová pečiatka Gramps"
 
 #: ../gramps/gen/lib/fs/familysearchsync.py:92
 msgid "FamilySearch modified timestamp"
-msgstr "FamilySearch zmenil časovú pečiatku"
+msgstr "Upravená časová pečiatka FamilySearch"
 
 #: ../gramps/gen/lib/fs/familysearchsync.py:96
 msgid "Essential conflict"
@@ -11713,6 +11713,17 @@ msgid ""
 "       export SSL_CERT_FILE=/etc/ssl/cert.pem\n"
 "  3. Install the certifi package:  pip install certifi"
 msgstr ""
+"\n"
+"\n"
+"V systéme macOS nemusí mať Python prístup k systémovým SSL certifikátom.  "
+"Skúste jeden z nasledujúcich postupov:\n"
+"  1. Inštalačný program z python.org: spustite súbor „Install "
+"Certificates.command“ vo vašej inštalačnej zložke Pythonu (napr. /Aplikácie/"
+"Python 3.x/).\n"
+"  2. pyenv / Homebrew / nesystémový Python: pred spustením Gramps nastavte "
+"premennú prostredia SSL_CERT_FILE:\n"
+"       export SSL_CERT_FILE=/etc/ssl/cert.pem\n"
+"  3. Nainštalujte balík certifi:  pip install certifi"
 
 #: ../gramps/gen/utils/pypi.py:237
 msgid ""
@@ -11728,37 +11739,47 @@ msgid ""
 "Ubuntu)\n"
 "       export SSL_CERT_FILE=/etc/pki/tls/certs/ca-bundle.crt    (RHEL/Fedora)"
 msgstr ""
+"\n"
+"\n"
+"Overenie SSL certifikátu zlyhalo.  Toto sa často vyskytuje pri nesystémových "
+"inštaláciách Pythonu (pyenv, conda), ktorých dodávaný OpenSSL nevie, kde sú "
+"uložené systémové certifikáty.  Skúste jedno z nasledujúcich riešení:\n"
+"  1. Nainštalujte balík certifi:  pip install certifi\n"
+"  2. Pred spustením Gramps nastavte premennú prostredia SSL_CERT_FILE na váš "
+"systémový CA balík, napr.:\n"
+"       export SSL_CERT_FILE=/etc/ssl/certs/ca-certificates.crt  (Debian/"
+"Ubuntu)\n"
+"       export SSL_CERT_FILE=/etc/pki/tls/certs/ca-bundle.crt    (RHEL/Fedora)"
 
 #: ../gramps/gen/utils/pypi.py:470
 #, python-format
 msgid "Cannot reach PyPI for package '%s': %s"
-msgstr ""
+msgstr "Nie je možné dosiahnuť PyPI pre balík „%s“: %s"
 
 #: ../gramps/gen/utils/pypi.py:561
 #, python-format
 msgid "No compatible wheel found for '%s==%s' on this platform."
-msgstr ""
+msgstr "Na tejto platforme nebol pre „%s==%s“ nájdený kompatibilný súbor wheel."
 
 #: ../gramps/gen/utils/pypi.py:591
 #, python-format
 msgid "No compatible wheel found for '%s' on this platform."
-msgstr ""
+msgstr "Na tejto platforme nebol pre „%s“ nájdený kompatibilný súbor wheel."
 
 #: ../gramps/gen/utils/pypi.py:613
 #, python-format
 msgid "SHA-256 mismatch for '%s': expected %s, got %s"
-msgstr ""
+msgstr "Nezhoda SHA-256 pre „%s“: očakávané %s, získané %s"
 
 #: ../gramps/gen/utils/pypi.py:1214
 #, python-format
 msgid "No version of '%s' satisfies all constraints: %s"
-msgstr ""
+msgstr "Žiadna verzia „%s“ nespĺňa všetky obmedzenia: %s"
 
 #: ../gramps/gen/utils/pypi.py:1285
-#, fuzzy, python-format
-#| msgid "No file to download"
+#, python-format
 msgid "Failed to download '%s': %s"
-msgstr "Žiadny súbor na stiahnutie"
+msgstr "Nepodarilo sa stiahnuť „%s“: %s"
 
 #: ../gramps/gen/utils/requirements.py:172
 msgid "Python modules"
@@ -15579,7 +15600,7 @@ msgstr "Upraviť mediálny objekt (%s)"
 #: ../gramps/gui/editors/editmediaref.py:83
 msgctxt "manual"
 msgid "Media_Reference_Editor_dialog"
-msgstr "1Dialógové_okno_Editor_odkazu_média"
+msgstr "Dialógové_okno_Editor_odkazu_média"
 
 #: ../gramps/gui/editors/editmediaref.py:105
 #: ../gramps/gui/editors/editmediaref.py:440
@@ -17162,28 +17183,18 @@ msgid "Downloading ancestors… (4/11)"
 msgstr "Sťahovanie predkov… (4/11)"
 
 #: ../gramps/gui/fs/fs_import/importer.py:152
-#, fuzzy, python-format
-#| msgid ""
-#| "Total ancestors in generations %(second_generation)d to "
-#| "%(last_generation)d is %(count)d. %(percent)s"
+#, python-format
 msgid "Downloading ancestor generation %(gen)d/%(total)d… (%(count)d person)"
 msgid_plural ""
 "Downloading ancestor generation %(gen)d/%(total)d… (%(count)d people)"
-msgstr[0] ""
-"Celkový počet predkov v generáciách %(second_generation)d do "
-"%(last_generation)d je %(count)d. %(percent)s"
-msgstr[1] ""
-"Celkový počet predkov v generáciách %(second_generation)d do "
-"%(last_generation)d je %(count)d. %(percent)s"
-msgstr[2] ""
-"Celkový počet predkov v generáciách %(second_generation)d do "
-"%(last_generation)d je %(count)d. %(percent)s"
+msgstr[0] "Sťahovanie generácie predkov %(gen)d/%(total)d… (%(count)d osoba)"
+msgstr[1] "Sťahovanie generácie predkov %(gen)d/%(total)d… (%(count)d osoby)"
+msgstr[2] "Sťahovanie generácie predkov %(gen)d/%(total)d… (%(count)d osôb)"
 
 #: ../gramps/gui/fs/fs_import/importer.py:159
-#, fuzzy, python-format
-#| msgid "Downloading ancestors… (4/11)"
+#, python-format
 msgid "Downloading ancestors… (4/11) — generation %(gen)d/%(total)d"
-msgstr "Sťahovanie predkov… (4/11)"
+msgstr "Sťahovanie predkov… (4/11) — generácia %(gen)d/%(total)d"
 
 #: ../gramps/gui/fs/fs_import/importer.py:168
 msgid "Downloading descendants… (5/11)"
@@ -17194,28 +17205,26 @@ msgstr "Sťahovanie potomkov… (5/11)"
 msgid "Downloading descendant generation %(gen)d/%(total)d… (%(count)d person)"
 msgid_plural ""
 "Downloading descendant generation %(gen)d/%(total)d… (%(count)d people)"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Sťahovanie generácie potomkov %(gen)d/%(total)d… (%(count)d osoba)"
+msgstr[1] "Sťahovanie generácie potomkov %(gen)d/%(total)d… (%(count)d osoby)"
+msgstr[2] "Sťahovanie generácie potomkov %(gen)d/%(total)d… (%(count)d osôb)"
 
 #: ../gramps/gui/fs/fs_import/importer.py:185
-#, fuzzy, python-format
-#| msgid "Downloading descendants… (5/11)"
+#, python-format
 msgid "Downloading descendants… (5/11) — generation %(gen)d/%(total)d"
-msgstr "Sťahovanie potomkov… (5/11)"
+msgstr "Sťahovanie potomkov… (5/11) — generácia %(gen)d/%(total)d"
 
 #: ../gramps/gui/fs/fs_import/importer.py:195
 msgid "Downloading spouses… (6/11)"
 msgstr "Sťahovanie manželských partnerov… (6/11)"
 
 #: ../gramps/gui/fs/fs_import/importer.py:200
-#, fuzzy, python-format
-#| msgid "Downloading spouses…"
+#, python-format
 msgid "Downloading spouses for %d person…"
 msgid_plural "Downloading spouses for %d people…"
-msgstr[0] "Sťahovanie manželských partnerov…"
-msgstr[1] "Sťahovanie manželských partnerov…"
-msgstr[2] "Sťahovanie manželských partnerov…"
+msgstr[0] "Sťahovanie manželov pre %d osobu…"
+msgstr[1] "Sťahovanie manželov pre %d osoby…"
+msgstr[2] "Sťahovanie manželov pre %d osôb…"
 
 #: ../gramps/gui/fs/fs_import/importer.py:210
 msgid "Downloading notes… (7/11)"
@@ -17228,7 +17237,7 @@ msgstr "Sťahovanie poznámok a zdrojov…"
 #: ../gramps/gui/fs/fs_import/importer.py:285
 #, python-format
 msgid "  …notes/sources: %(done)d/%(total)d"
-msgstr ""
+msgstr "  …poznámky/zdroje: %(done)d/%(total)d"
 
 #: ../gramps/gui/fs/fs_import/importer.py:296
 msgid "Importing…"
@@ -17268,51 +17277,47 @@ msgid "Importing children…"
 msgstr "Importovanie detí…"
 
 #: ../gramps/gui/fs/fs_import/importer.py:381
-#, fuzzy
-#| msgid "FamilySearch modified timestamp"
 msgid "Resolving FamilySearch timestamps…"
-msgstr "FamilySearch zmenil časovú pečiatku"
+msgstr "Vyhodnocovanie časových pečiatok FamilySearch…"
 
 #: ../gramps/gui/fs/fs_import/importer.py:385
-#, fuzzy, python-format
-#| msgid "No FamilySearch Person ID is set for this person."
+#, python-format
 msgid "Resolving FamilySearch timestamps for %d person…"
 msgid_plural "Resolving FamilySearch timestamps for %d people…"
-msgstr[0] "Pre túto osobu nie je nastavené žiadne ID osoby FamilySearch."
-msgstr[1] "Pre túto osobu nie je nastavené žiadne ID osoby FamilySearch."
-msgstr[2] "Pre túto osobu nie je nastavené žiadne ID osoby FamilySearch."
+msgstr[0] "Vyhodnocovanie časových pečiatok FamilySearch pre %d osobu…"
+msgstr[1] "Vyhodnocovanie časových pečiatok FamilySearch pre %d osoby…"
+msgstr[2] "Vyhodnocovanie časových pečiatok FamilySearch pre %d osôb…"
 
 #: ../gramps/gui/fs/fs_import/importer.py:397
 #, python-format
 msgid "Resolved %(count)d FamilySearch timestamp in %(elapsed).1fs"
 msgid_plural "Resolved %(count)d FamilySearch timestamps in %(elapsed).1fs"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Vyhodnotená %(count)d časová pečiatka FamilySearch za %(elapsed).1fs"
+msgstr[1] "Vyhodnotené %(count)d časové pečiatky FamilySearch za %(elapsed).1fs"
 msgstr[2] ""
+"Vyhodnotených %(count)d časových pečiatok FamilySearch za %(elapsed).1fs"
 
 #: ../gramps/gui/fs/fs_import/importer.py:405
-#, fuzzy
-#| msgid "Refreshing Addon List"
 msgid "Refreshing comparison status…"
-msgstr "Obnovenie zoznamu doplnkov"
+msgstr "Aktualizácia stavu porovnania…"
 
 #: ../gramps/gui/fs/fs_import/importer.py:410
 #, python-format
 msgid "Refreshing comparison status for %d person…"
 msgid_plural "Refreshing comparison status for %d people…"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "Aktualizácia stavu porovnania pre %d osobu…"
+msgstr[1] "Aktualizácia stavu porovnania pre %d osoby…"
+msgstr[2] "Aktualizácia stavu porovnania pre %d osôb…"
 
 #: ../gramps/gui/fs/fs_import/importer.py:448
 #, python-format
 msgid "  …comparison for %(fsid)s took %(elapsed).1fs"
-msgstr ""
+msgstr "  …porovnanie pre %(fsid)s trvalo %(elapsed).1fs"
 
 #: ../gramps/gui/fs/fs_import/importer.py:453
 #, python-format
 msgid "  …comparison status: %(done)d/%(total)d"
-msgstr ""
+msgstr "  …stav porovnania: %(done)d/%(total)d"
 
 #: ../gramps/gui/fs/fs_import/importer.py:463
 #, python-format
@@ -17320,6 +17325,8 @@ msgid ""
 "Comparison status refresh done in %(elapsed).1fs (%(compared)d compared, "
 "%(failed)d failed)"
 msgstr ""
+"Aktualizácia stavu porovnania dokončená za %(elapsed).1fs (%(compared)d "
+"porovnaných, %(failed)d neúspešných)"
 
 #: ../gramps/gui/fs/fs_import/options.py:36
 #: ../gramps/gui/fs/fs_import/tool.py:42
@@ -18213,10 +18220,8 @@ msgid "Editor person: (none)"
 msgstr "Osoba v editore: (žiadna)"
 
 #: ../gramps/gui/fs/tools_window.py:358
-#, fuzzy
-#| msgid "Only in FamilySearch"
 msgid "Open Person in FamilySearch"
-msgstr "Len vo FamilySearch"
+msgstr "Otvoriť osobu vo FamilySearch"
 
 #: ../gramps/gui/fs/tools_window.py:381
 msgid "Single Person Actions"
@@ -18300,10 +18305,8 @@ msgstr ""
 "úmrtie)."
 
 #: ../gramps/gui/fs/tools_window.py:635
-#, fuzzy
-#| msgid "Keep FamilySearch"
 msgid "Open FamilySearch.org"
-msgstr "Zachovať FamilySearch"
+msgstr "Otvoriť FamilySearch.org"
 
 #: ../gramps/gui/fs/tools_window.py:774
 #, python-format
@@ -21416,16 +21419,13 @@ msgid "Gramps was unable to install the required modules"
 msgstr "Programu Gramps sa nepodarilo nainštalovať požadované moduly"
 
 #: ../gramps/gui/plug/_windows.py:370
-#, fuzzy
-#| msgid "Module installation failed"
 msgid "Addon installation failed"
-msgstr "Inštalácia modulu zlyhala"
+msgstr "Inštalácia doplnku zlyhala"
 
 #: ../gramps/gui/plug/_windows.py:371
-#, fuzzy, python-format
-#| msgid "Gramps was unable to install the required modules"
+#, python-format
 msgid "Gramps was unable to install '%s'."
-msgstr "Programu Gramps sa nepodarilo nainštalovať požadované moduly"
+msgstr "Gramps nedokázal nainštalovať „%s“."
 
 #: ../gramps/gui/plug/_windows.py:391
 msgid "Requirements"
