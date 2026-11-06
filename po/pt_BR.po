@@ -14,13 +14,14 @@
 # Isaki23 <isaquefonseca230706@gmail.com>, 2025.
 # Mateus Liberale Gomes <sergiogomes209403@gmail.com>, 2025.
 # Andre Magri <andremagri@gmail.com>, 2026.
+# Nazivon <nazivon@users.noreply.hosted.weblate.org>, 2026.
 msgid ""
 msgstr ""
 "Project-Id-Version: GRAMPS 5.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2026-09-13 00:06+0100\n"
-"PO-Revision-Date: 2026-06-27 23:52+0000\n"
-"Last-Translator: Andre Magri <andremagri@gmail.com>\n"
+"PO-Revision-Date: 2026-11-02 08:51+0000\n"
+"Last-Translator: Nazivon <nazivon@users.noreply.hosted.weblate.org>\n"
 "Language-Team: Portuguese (Brazil) <https://hosted.weblate.org/projects/"
 "gramps-project/gramps/pt_BR/>\n"
 "Language: pt_BR\n"
@@ -28,7 +29,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 2026.7.dev0\n"
+"X-Generator: Weblate 2026.11.dev0\n"
 "X-Poedit-Basepath: ../gramps-master/gramps\n"
 "X-Poedit-SearchPath-0: .\n"
 
@@ -3171,14 +3172,14 @@ msgstr "por volta de "
 #: ../gramps/gen/datehandler/_datestrings.py:254
 msgctxt "date modifier"
 msgid "from "
-msgstr ""
+msgstr "de "
 
 #. Translators: if the modifier is after the date
 #. put the space ahead of the word instead of after it
 #: ../gramps/gen/datehandler/_datestrings.py:257
 msgctxt "date modifier"
 msgid "to "
-msgstr ""
+msgstr "até "
 
 #: ../gramps/gen/datehandler/_datestrings.py:262
 msgctxt "date quality"
@@ -7137,7 +7138,7 @@ msgstr "Família"
 #: ../gramps/gui/fs/person/mixins/compare_gtk.py:2084
 #: ../gramps/gui/fs/person/mixins/compare_gtk.py:2288
 msgid "Not connected to FamilySearch"
-msgstr ""
+msgstr "Não conectado ao FamilySearch"
 
 #: ../gramps/gen/fs/compare/aggregate.py:326
 #: ../gramps/gui/fs/person/mixins/compare_gtk.py:623
@@ -7194,7 +7195,7 @@ msgstr "Famílias"
 #: ../gramps/gen/fs/compare/aggregate.py:352
 #: ../gramps/gui/fs/person/mixins/compare_gtk.py:640
 msgid "Facts"
-msgstr ""
+msgstr "Fatos"
 
 #: ../gramps/gen/fs/compare/comparators.py:334
 #: ../gramps/gen/fs/compare/comparators.py:341 ../gramps/gen/utils/string.py:49
